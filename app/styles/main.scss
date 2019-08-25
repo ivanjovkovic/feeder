@@ -1,0 +1,359 @@
+@import "fonts";
+@import "colors";
+@import "transition";
+
+body {
+  width: 100%;
+  font-family: $font-open-sans;
+  color: $white;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input,
+textarea {
+  &:focus {
+    border-color: #ced4da !important;
+  }
+}
+
+select {
+  border: none !important;
+  cursor: pointer;
+}
+
+.welcome-banner {
+  position: relative;
+  background-color: $header-background;
+}
+
+/* Header start */
+.header {
+  max-width: 1600px;
+  margin: 0 auto;
+
+  .feeder-logo {
+    display: inline-block;
+    margin: 27px 0 27px 100px;
+  }
+
+  .menu {
+    display: inline-block;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: right;
+    }
+
+    .nav-item {
+      list-style: none;
+      display: inline-block;
+      margin: 0 12.5px;
+    }
+
+    .nav-link {
+      color: $white;
+      font-size: 11px;
+      letter-spacing: 3.4px;
+      line-height: 19px;
+      text-transform: uppercase;
+      padding: 0;
+    }
+  }
+
+  .search {
+    display: inline-block;
+    margin: 0 100px 0 55px;
+  }
+}
+
+/* Header end */
+
+/* Heading start */
+.heading {
+  text-align: center;
+
+  .wrapper {
+    padding: 270px 0 350px;
+  }
+
+  h4 {
+    font-family: $font-raleway;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3.4px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  h2 {
+    width: 551px;
+    margin: 0 auto 28px;
+    font-family: $font-open-sans;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 58px;
+  }
+
+  p {
+    font-family: $font-open-sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+}
+
+/* Heading end */
+
+/* Arrow start */
+.arrow {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* Arrow end */
+
+/* About us start */
+.about-us {
+  text-align: center;
+
+  .wrapper {
+    padding: 75px 0 95px;
+  }
+
+  h3 {
+    color: $heading;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+    margin-bottom: 39px;
+  }
+
+  p {
+    width: 900px;
+    margin: 0 auto;
+    color: $text;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+}
+
+/* About us end */
+
+/* Introduction start */
+.introduction {
+  .wrapper {
+    padding: 140.5px 229px 140.5px 78.72px;
+  }
+
+  .left {
+    background-color: $introduction-left;
+  }
+
+  .right {
+    background-color: $introduction-right;
+  }
+
+  h3 {
+    color: $heading;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    width: 492.28px;
+    color: $text;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+}
+
+/* Introduction end */
+
+/* Portfolio start */
+.portfolio {
+  text-align: center;
+
+  .wrapper {
+    padding: 87.5px 0 104px;
+  }
+
+  h3 {
+    color: $heading;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+    margin-bottom: 39px;
+  }
+
+  p {
+    color: $text;
+    margin-bottom: 55.5px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+
+  .filter {
+    ul {
+      margin: 0;
+      margin-bottom: 60.5px;
+      padding: 0;
+    }
+
+    .nav-item {
+      list-style: none;
+      display: inline-block;
+    }
+
+    .nav-link {
+      color: $filter-link;
+      font-family: $font-raleway;
+      padding: 0;
+      padding-bottom: 8px;
+      margin: 0 26.5px;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3.4px;
+      line-height: 11px;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent;
+
+      &.active {
+        border-bottom-color: $filter-link;
+      }
+
+      span {
+        display: inline-block;
+        margin-right: -3.4px;
+      }
+    }
+  }
+
+  .gallery {
+    max-width: 1600px;
+    min-height: 800px;
+    margin: 0 auto 100.5px;
+
+    .items {
+      display: flex;
+      min-height: 800px;
+    }
+
+    .item {
+      flex: 1;
+      height: 400px;
+
+      .first {
+        background-color: $item-first;
+        height: 100%;
+      }
+
+      .second {
+        background-color: $item-second;
+        height: 100%;
+      }
+
+      .third {
+        background-color: $item-third;
+        height: 100%;
+      }
+
+      .active {
+        background-color: $item-active;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .active-wrapper {
+          margin: 23px 18px;
+        }
+      }
+
+      h5 {
+        color: $white;
+        font-family: $font-raleway;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 5.56px;
+        line-height: 21px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: $white;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+        position: relative;
+
+        &::after {
+          content: " ";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 90px;
+          height: 1px;
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  .btn-view-all {
+    display: inline-block;
+    color: $filter-link;
+    font-family: $font-raleway;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3.4px;
+    line-height: 11px;
+    text-transform: uppercase;
+    padding: 16px 41px 15px;
+    border: 2px solid $filter-link-border;
+    transition: $transition;
+
+    &:hover {
+      color: $white;
+      background-color: $filter-link-border;
+    }
+  }
+}
+
+/* Portfolio end */
