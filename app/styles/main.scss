@@ -2,8 +2,9 @@
 @import "colors";
 @import "transition";
 
+html,
 body {
-  width: 100%;
+  font-size: 1rem;
   font-family: $font-open-sans;
   color: $white;
 }
@@ -41,19 +42,40 @@ select {
   cursor: pointer;
 }
 
+/*======================
+  === Welcome banner ===
+  ======================*/
+
 .welcome-banner {
   position: relative;
   background-color: $header-background;
+
+  .welcome-banner-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
-/* Header start */
+/*==============
+  === Header ===
+  ==============*/
+
 .header {
   max-width: 1600px;
   margin: 0 auto;
 
+  .feeder-logo-wrapper {
+    padding: 27px 0 27px 100px;
+  }
+
   .feeder-logo {
     display: inline-block;
-    margin: 27px 0 27px 100px;
 
     svg {
       path {
@@ -70,7 +92,7 @@ select {
   .menu {
     display: inline-block;
 
-    ul {
+    .navbar-collapse {
       margin: 0;
       padding: 0;
       text-align: right;
@@ -84,7 +106,7 @@ select {
 
     .nav-link {
       color: $white;
-      font-size: 11px;
+      font-size: 0.6875rem;
       letter-spacing: 3.4px;
       line-height: 19px;
       text-transform: uppercase;
@@ -96,29 +118,39 @@ select {
       }
     }
   }
+}
 
-  .search {
-    display: inline-block;
-    margin: 0 100px 0 55px;
+/*==============
+  === Search ===
+  ==============*/
 
-    svg {
+.search-wrapper {
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.search {
+  display: inline-block;
+
+  svg {
+    path {
+      transition: $transition;
+    }
+    &:hover {
       path {
-        transition: $transition;
-      }
-      &:hover {
-        path {
-          fill: $white-hover;
-        }
+        fill: $white-hover;
       }
     }
   }
 }
 
-/* Header end */
+/*===============
+  === Heading ===
+  ===============*/
 
-/* Heading start */
 .heading {
   text-align: center;
+  position: relative;
 
   .wrapper {
     padding: 270px 0 350px;
@@ -126,7 +158,7 @@ select {
 
   h4 {
     font-family: $font-raleway;
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: bold;
     letter-spacing: 3.4px;
     line-height: 24px;
@@ -138,23 +170,24 @@ select {
     width: 551px;
     margin: 0 auto 28px;
     font-family: $font-open-sans;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 300;
     line-height: 58px;
   }
 
   p {
     font-family: $font-open-sans;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 20px;
     margin-bottom: 0;
   }
 }
 
-/* Heading end */
+/*=============
+  === Arrow ===
+  =============*/
 
-/* Arrow start */
 .arrow {
   position: absolute;
   bottom: 60px;
@@ -173,9 +206,10 @@ select {
   }
 }
 
-/* Arrow end */
+/*=================
+  === About us ====
+  =================*/
 
-/* About us start */
 .about-us {
   text-align: center;
 
@@ -185,7 +219,7 @@ select {
 
   h3 {
     color: $heading;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 300;
     line-height: 44px;
     margin-bottom: 39px;
@@ -196,15 +230,16 @@ select {
     margin: 0 auto;
     color: $text;
     margin-bottom: 0;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 300;
     line-height: 30px;
   }
 }
 
-/* About us end */
+/*====================
+  === Introduction ===
+  ====================*/
 
-/* Introduction start */
 .introduction {
   .wrapper {
     padding: 140.5px 229px 140.5px 78.72px;
@@ -212,6 +247,18 @@ select {
 
   .left {
     background-color: $introduction-left;
+    position: relative;
+
+    .image-background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 
   .right {
@@ -220,7 +267,7 @@ select {
 
   h3 {
     color: $heading;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 300;
     line-height: 44px;
     margin-bottom: 40px;
@@ -230,15 +277,16 @@ select {
     width: 492.28px;
     color: $text;
     margin-bottom: 0;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 300;
     line-height: 30px;
   }
 }
 
-/* Introduction end */
+/*=================
+  === Portfolio ===
+  =================*/
 
-/* Portfolio start */
 .portfolio {
   text-align: center;
 
@@ -248,7 +296,7 @@ select {
 
   h3 {
     color: $heading;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 300;
     line-height: 44px;
     margin-bottom: 39px;
@@ -257,7 +305,7 @@ select {
   p {
     color: $text;
     margin-bottom: 55.5px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 300;
     line-height: 30px;
   }
@@ -275,18 +323,21 @@ select {
     }
 
     .nav-link {
+      display: inline-block;
       color: $filter-link;
       font-family: $font-raleway;
       padding: 0;
       padding-bottom: 8px;
       margin: 0 26.5px;
-      font-size: 11px;
+      font-size: 0.6875rem;
       font-weight: bold;
       letter-spacing: 3.4px;
       line-height: 11px;
       text-transform: uppercase;
       border-bottom: 2px solid transparent;
+      transition: $transition;
 
+      &:hover,
       &.active {
         border-bottom-color: $filter-link;
       }
@@ -299,12 +350,10 @@ select {
   }
 
   .gallery {
-    max-width: 1600px;
-    min-height: 800px;
-    margin: 0 auto 100.5px;
-
     .items {
+      margin: 0 auto 100.5px;
       display: flex;
+      max-width: 1600px;
       min-height: 800px;
     }
 
@@ -313,30 +362,60 @@ select {
       flex-direction: column;
       flex: 1;
 
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
       .flex-1 {
         flex: 1;
+        cursor: pointer;
+
+        &:hover {
+          .print {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
       }
 
       .flex-17 {
         flex: 1.7;
+        cursor: pointer;
+
+        &:hover {
+          .print {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
       }
 
       .first {
         background-color: $item-first;
         display: flex;
+        position: relative;
       }
 
       .second {
         background-color: $item-second;
         display: flex;
+        position: relative;
       }
 
       .third {
         background-color: $item-third;
         display: flex;
+        position: relative;
       }
 
-      .active {
+      .print {
+        visibility: hidden;
+        opacity: 0;
+        transition: $transition-2;
         background-color: $item-active;
         display: flex;
         flex-direction: column;
@@ -344,17 +423,13 @@ select {
         align-items: center;
         justify-content: center;
         margin: 23px 18px;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
+        z-index: 1;
       }
 
       h5 {
         color: $white;
         font-family: $font-raleway;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 600;
         letter-spacing: 5.56px;
         line-height: 21px;
@@ -365,7 +440,7 @@ select {
 
       p {
         color: $white;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 300;
         line-height: 30px;
         padding-bottom: 20px;
@@ -390,7 +465,7 @@ select {
     display: inline-block;
     color: $filter-link;
     font-family: $font-raleway;
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: bold;
     letter-spacing: 3.4px;
     line-height: 11px;
@@ -406,4 +481,159 @@ select {
   }
 }
 
-/* Portfolio end */
+/*=====================
+  === Media queries ===
+  =====================*/
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .portfolio {
+    .gallery {
+      .items {
+        .item {
+          height: 30vh !important;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .header {
+    .feeder-logo-wrapper {
+      padding-left: 0;
+    }
+    .navbar-dark {
+      .navbar-toggler {
+        border: none;
+        background-color: $item-active;
+        padding: 0;
+
+        span {
+          margin: 4px 12px;
+        }
+      }
+    }
+    .menu {
+      .wrapper {
+        padding: 10px 0;
+
+        .nav-item {
+          display: block;
+          margin: 0;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .heading {
+    .wrapper {
+      padding: 19px 15px 50px;
+    }
+    h2 {
+      width: auto;
+    }
+  }
+  .arrow {
+    bottom: 10px;
+  }
+  .introduction {
+    .left {
+      .image-background {
+        position: static;
+      }
+    }
+  }
+  .portfolio {
+    p {
+      margin-bottom: 40px;
+    }
+    .filter {
+      ul {
+        margin-bottom: 40px;
+      }
+      .nav-item {
+        display: block;
+      }
+    }
+    .gallery {
+      .items {
+        display: block;
+        max-width: 100%;
+        min-height: auto;
+        margin: 0;
+        .item {
+          height: 60vh;
+          flex-direction: row;
+          .flex-17 {
+            flex: 1;
+          }
+          .print {
+            margin: 15px;
+          }
+        }
+      }
+    }
+    .btn-view-all {
+      margin-top: 40px;
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .header {
+    padding: 0 15px;
+    .feeder-logo-wrapper {
+      padding-left: 0;
+    }
+  }
+  .about-us {
+    .wrapper {
+      padding: 40px 15px;
+    }
+    p {
+      width: auto;
+    }
+  }
+  .portfolio {
+    .gallery {
+      .items {
+        min-height: 400px;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .search-wrapper {
+    padding: 0;
+  }
+  .introduction {
+    .wrapper {
+      padding: 40px 15px;
+    }
+    p {
+      width: auto;
+    }
+  }
+  .portfolio {
+    .wrapper {
+      padding: 40px 0;
+    }
+    .gallery {
+      .items {
+        min-height: 50vh;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
